@@ -17,7 +17,7 @@
         $row = mysqli_fetch_array($result);
     ?>
     <h1>Consulta</h1>
-    <a href="CadastriCidade.html">Cadastrar Novo Animal</a>
+    <a href="CadastroAnimal.php">Cadastrar Novo Animal</a>
     <table align="center" border="1" width="500">
         <tr>
             
