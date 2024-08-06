@@ -20,7 +20,7 @@
     <a href="CadastriCidade.html">Cadastrar Novo Animal</a>
     <table align="center" border="1" width="500">
         <tr>
-            <th>Código</th>
+            
             <th>Nome</th>
             <th>Espécie</th>
             <th>Raça</th>
@@ -32,7 +32,6 @@
         //mysql_fetch_array le uma linha por vez
             while($row = mysqli_fetch_array($result)){
             echo "<tr>";
-            echo "<td>".$row['id']."</td>";
             echo "<td>".$row['nome']."</td>";
             echo "<td>".$row['especie']."</td>";
             echo "<td>".$row['raca']."</td>";
