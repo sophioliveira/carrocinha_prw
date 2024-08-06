@@ -1,7 +1,7 @@
 <?php
     include('includes/conexao.php');
     $id = $_GET['id'];
-    $sql = "SELECT * FROM cidade WHERE id=$id";
+    $sql = "SELECT * FROM Cidade WHERE id=$id";
     $result = mysqli_query($con,$sql);
     $row = mysqli_fetch_array($result);
 ?>
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="index.html">
 </head>
 <body>
-    <form action="alteraCidadeExe.php" method="post">
+    <form action="AlteraCidadeExe.php" method="post">
         <fieldset>
             <legend>Cadastro Cidade</legend>
             <div>
