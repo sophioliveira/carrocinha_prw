@@ -21,7 +21,7 @@
         echo "Data Nascimento: $data_nascimento<br>";
         echo "Castrado: $castrado<br>"; 
 
-        $sql = "INSERT INTO Pessoa (nome, especie, raca, data_nascimento, castrado)";
+        $sql = "INSERT INTO Animal (nome, especie, raca, data_nascimento, castrado)";
         $sql .= " VALUES ('".$nome."','".$especie."','".$raca."','".$data_nascimento."','".$castrado."')";
         echo $sql;
         // Executa comando no banco de dados 
