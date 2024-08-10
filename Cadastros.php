@@ -16,8 +16,8 @@
         //retorna apenas uma linha
         $row = mysqli_fetch_array($result);
     ?>
-    <h1>Consulta</h1>
-    <a href="CadastroAnimal.php">Cadastrar Novo Animal</a>
+    <h1>Cadastros</h1>
+    <h2>Animais Cadastrados</h2>
     <table align="center" border="1" width="500">
         <tr>
             
@@ -41,6 +41,40 @@
             echo "</tr>";
             }
         ?>
+        <?php
+        include('includes/conexao.php');
+        $sql = "SELECT * FROM Pessoa";
+        //Executa a consulta
+        $result = mysqli_query($con, "$sql");
+        //retorna apenas uma linha
+        $row = mysqli_fetch_array($result);
+    ?>
+        <h2>Pessoas Cadastradas</h2>
+    <table align="center" border="1" width="500">
+        <tr>
+            
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Bairro</th>
+            <th>Cep</th>
+            <th>Alterar</th>
+            <th>Deletar</th>
+        </tr>
+        <?php
+        //mysql_fetch_array le uma linha por vez
+            while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+            echo "<td>".$row['nome']."</td>";
+            echo "<td>".$row['endereco']."</td>";
+            echo "<td>".$row['bairro']."</td>";
+            echo "<td>".$row['cep']."</td>";
+            echo "<td> <a href='AlteraCidade.php?id=".$row['id']."'>Alterar</a></td>";
+            echo "<td> <a href='DeletaCidade.php?id=".$row['id']."'>Deletar</a></td>";
+            echo "</tr>";
+            }
+        ?>
     </table>
+    <a href="CadastroCidade.html">Realizar um novo cadastro</a>
+
 </body>
 </html>

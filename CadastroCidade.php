@@ -22,6 +22,7 @@
         $result = mysqli_query($con, $sql);
         if($result){
             echo "<h2>Dados cadastrados com secesso!</h2>";
+            echo "<button ><a href='CadastroPessoa.php'> Clique aqui para continuar o cadastro</a></button>";
         }else {
             echo "<h2>Erro ao cadastrar!</h2>";
             echo mysqli_error($con);
