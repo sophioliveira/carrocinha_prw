@@ -17,8 +17,10 @@
     <?php
     echo "<p>Id: $id</p>";
     echo "<p>Nome: $nome</p>";
-    echo "<p>Estado: $estado</p>";
-    $sql = "UPDATE cidade SET nome = '$nome', estado = '$estado' WHERE id = $id";
+    echo "<p>Endereço: $endereco</p>";
+    echo "<p>Bairro:$bairro</p>";
+    echo "<p>Cep:$cep</p>";
+    $sql = "UPDATE cidade SET nome = '$nome', endereco = '$endereco', bairro = '$bairro', cep = '$cep' WHERE id = $id";
     $result = mysqli_query($con, $sql);
     if($result)
         echo "Dados atualizados";
